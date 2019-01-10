@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import RxSwift
 import MaterialComponents.MaterialTextFields
 
 class LoginViewController: UIViewController {
 
     var allTextFieldControllers = [MDCTextInputControllerUnderline]()
+    private let loginViewModel = LoginViewModel()
     
     @IBOutlet weak var mobilePhoneNumberTextField: MDCTextField! {
         didSet {
@@ -43,18 +43,15 @@ class LoginViewController: UIViewController {
     // ナビゲーションバーの送信ボタンがタップされた時に呼ばれるメソッド
     @objc func handleSendCodeButton(_ sender: UIButton, forEvent event: UIEvent) {
         
-        let disposeBag = DisposeBag()
-        Api.shared.request(RestApi.SendShortMessage(mobilePhoneNumber:"09036404732"))
-            .subscribe(onSuccess: { (shortMessage) in
-                print(shortMessage)
-            }) { (error) in
-                print(error)
-            }
-            .disposed(by: disposeBag)
+        // SMS送信処理
+        // loginViewModel.sendShortMessage(mobilePhoneNumberTextField.text)
+        loginViewModel.sendShortMessage("09036404732")
         
-        let authViewController = AuthViewController(nibName: "AuthViewController", bundle: nil)
-        self.navigationController?.show(authViewController, sender: nil)
+        // 確認コード入力画面へプッシュ遷移
+        //let authViewController = AuthViewController(nibName: "AuthViewController", bundle: nil)
+        //self.navigationController?.show(authViewController, sender: nil)
     }
+    
     
     // ナビゲーションバーのキャンセルタップされた時に呼ばれるメソッド
     @objc func handleCancelButton(_ sender: UIButton, forEvent event: UIEvent) {

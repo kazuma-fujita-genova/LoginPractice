@@ -509,17 +509,20 @@ PODS:
   - Moya/RxSwift (12.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Realm (3.11.2):
+    - Realm/Headers (= 3.11.2)
+  - Realm/Headers (3.11.2)
+  - RealmSwift (3.11.2):
+    - Realm (= 3.11.2)
   - Result (4.0.0)
   - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
   - MaterialComponents
   - Moya/RxSwift
-  - RxCocoa
+  - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -531,9 +534,10 @@ SPEC REPOS:
     - MotionInterchange
     - MotionTransitioning
     - Moya
+    - Realm
+    - RealmSwift
     - Result
     - RxAtomic
-    - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
@@ -545,11 +549,12 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
+  RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: 79b40e815b16e6b7675214b35f177276e55c79f3
+PODFILE CHECKSUM: d17c6031224fc23a3feb16bd4b2ae0460bb1053a
 
 COCOAPODS: 1.5.3

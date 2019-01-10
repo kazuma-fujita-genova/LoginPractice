@@ -10,6 +10,7 @@ target 'LoginPractice' do
   #pod 'RxSwift'
   pod 'Moya/RxSwift'
   #pod 'RxCocoa'
+  pod 'RealmSwift'
   target 'LoginPracticeTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,5 +9,10 @@
 import Foundation
 
 struct ShortMessage: Codable {
+    
     let mobileTel: String
+
+    private enum CodingKeys: String, CodingKey {
+        case mobileTel = "mobile_tel"
+    }
 }

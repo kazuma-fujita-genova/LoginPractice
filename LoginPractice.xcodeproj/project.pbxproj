@@ -28,6 +28,10 @@
 		A414A9F421E47E700025C996 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414A9F221E47E700025C996 /* LoginViewController.swift */; };
 		A414A9F521E47E700025C996 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A414A9F321E47E700025C996 /* LoginViewController.xib */; };
 		A414A9F721E4834F0025C996 /* ShortMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414A9F621E4834F0025C996 /* ShortMessage.swift */; };
+		A45B954821E5A437008FB883 /* EndUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B954721E5A437008FB883 /* EndUser.swift */; };
+		A45B954B21E5AED2008FB883 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B954A21E5AED2008FB883 /* LoginViewModel.swift */; };
+		A45B954D21E5FD75008FB883 /* TempMobilePhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B954C21E5FD75008FB883 /* TempMobilePhoneNumber.swift */; };
+		A4CA34A721E5999C001571DF /* short_message.json in Resources */ = {isa = PBXBuildFile; fileRef = A4CA34A621E5999C001571DF /* short_message.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		A414A9F221E47E700025C996 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A414A9F321E47E700025C996 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A414A9F621E4834F0025C996 /* ShortMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortMessage.swift; sourceTree = "<group>"; };
+		A45B954721E5A437008FB883 /* EndUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndUser.swift; sourceTree = "<group>"; };
+		A45B954A21E5AED2008FB883 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A45B954C21E5FD75008FB883 /* TempMobilePhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempMobilePhoneNumber.swift; sourceTree = "<group>"; };
+		A4CA34A621E5999C001571DF /* short_message.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = short_message.json; sourceTree = "<group>"; };
 		A82A04E490D0CB00E3AB6977 /* Pods-LoginPracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginPracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginPracticeUITests/Pods-LoginPracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFFE79552551C8B492BDD4DE /* Pods-LoginPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginPractice/Pods-LoginPractice.release.xcconfig"; sourceTree = "<group>"; };
 		F3FFF027A9257D0B00D5B820 /* Pods_LoginPracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginPracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +167,8 @@
 		A414A9B221E44C9E0025C996 /* LoginPractice */ = {
 			isa = PBXGroup;
 			children = (
+				A45B954921E5AE94008FB883 /* ViewModels */,
+				A45B954621E5A411008FB883 /* Models */,
 				A414A9EF21E471650025C996 /* Commons */,
 				A414A9E521E44DF00025C996 /* TabBarViewController.swift */,
 				A414A9B321E44C9E0025C996 /* AppDelegate.swift */,
@@ -200,10 +210,28 @@
 		A414A9EF21E471650025C996 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				A4CA34A621E5999C001571DF /* short_message.json */,
 				A414A9F021E471E80025C996 /* Api.swift */,
 				A414A9F621E4834F0025C996 /* ShortMessage.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		A45B954621E5A411008FB883 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A45B954721E5A437008FB883 /* EndUser.swift */,
+				A45B954C21E5FD75008FB883 /* TempMobilePhoneNumber.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A45B954921E5AE94008FB883 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A45B954A21E5AED2008FB883 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +348,7 @@
 				A414A9EA21E452CE0025C996 /* AuthViewController.xib in Resources */,
 				A414A9E421E44D780025C996 /* RegistViewController.xib in Resources */,
 				A414A9F521E47E700025C996 /* LoginViewController.xib in Resources */,
+				A4CA34A721E5999C001571DF /* short_message.json in Resources */,
 				A414A9B921E44C9E0025C996 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,9 +431,10 @@
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -419,9 +449,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +491,9 @@
 			files = (
 				A414A9F721E4834F0025C996 /* ShortMessage.swift in Sources */,
 				A414A9ED21E454460025C996 /* ProfileViewController.swift in Sources */,
+				A45B954B21E5AED2008FB883 /* LoginViewModel.swift in Sources */,
+				A45B954D21E5FD75008FB883 /* TempMobilePhoneNumber.swift in Sources */,
+				A45B954821E5A437008FB883 /* EndUser.swift in Sources */,
 				A414A9E621E44DF00025C996 /* TabBarViewController.swift in Sources */,
 				A414A9B621E44C9E0025C996 /* ViewController.swift in Sources */,
 				A414A9E921E452CE0025C996 /* AuthViewController.swift in Sources */,

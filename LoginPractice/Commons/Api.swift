@@ -17,6 +17,11 @@ extension String {
 
 class Api {
     static let shared = Api()
+    // Stabを返却
+    // private let provider = MoyaProvider<MultiTarget>(stubClosure: MoyaProvider.immediatelyStub)
+    // n秒後にStabを返却
+    // private let provider = MoyaProvider<MultiTarget>(stubClosure: MoyaProvider.delayedStub(n))
+    // 通常のAPI通信
     private let provider = MoyaProvider<MultiTarget>()
     
     func request<R>(_ request: R) -> Single<R.Response> where R: RestApiTargetType {
@@ -37,7 +42,7 @@ extension RestApiTargetType {
         return ["X-API-Key":"r01zuB9dr2tc07JXZnrFyAeQ3PH9YS7CIcNQs1t0aqRxIAlN2w4LxBaGBm6NPo2e"]
     }
     var sampleData: Data {
-        let path = Bundle.main.path(forResource: "samples", ofType: "json")!
+        let path = Bundle.main.path(forResource: "short_message", ofType: "json")!
         return FileHandle(forReadingAtPath: path)!.readDataToEndOfFile()
     }
 }
